@@ -1,0 +1,95 @@
+
+  footer{
+    background-color: #F5F5F5;
+    position: relative;
+    bottom: -1272px;
+    width: 100%;
+    overflow-x: hidden;
+  }
+  footer .card{
+    margin-left: 7rem;
+    margin-right: -1rem;
+    margin-top: 3rem;
+  }
+  .no-gutters div img{
+    width: 82%;
+    margin-top: 2rem;
+    margin-left: 1rem;
+    padding-right: 1rem;
+    border-right: 2px solid #dfdfdf;
+  }
+  .card-body form button {
+      min-width: 40px;
+  }
+  .card-body p span {
+      color: #E10001;
+  }
+  .card-title::after{
+    display: block;
+    content: "";
+    width: 40%;
+    color: #E10001;
+    background-color: #E10001;
+    height: 1px;
+    margin-top: 4px;
+  }
+  .footerCol{
+    flex: 0 0 25%;
+    max-width: 20%;
+    display: grid;
+    grid-gap: 14px;
+  }
+  .footerCol b {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+  .footerLink{
+      color: #000000;
+  }
+  .footerLink:hover{
+      color: #E10001;
+      text-decoration: none;
+  }
+  .social{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 1rem;
+  }
+  .socialLink{
+    color: #000000;
+    text-decoration: none;
+    background-color: white;
+    padding: 8px;
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 20%;
+  }
+  .socialLink:hover{
+      color: white;
+      background-color: #E10001;;
+  }
+  
+  .searchBar {
+    display:  flex;
+    flex-wrap: nowrap;
+}
+
+.searchBar button{
+    background-color: #E10001;
+    border: 0px;
+    border-radius:0px 10px 10px 0px;
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 100;
+    min-width: 85px;
+}
+.searchBar button:hover {
+    background-color: #000000;
+}
+.searchBar input{
+    padding: 9px;
+    border: 1px solid #e6e6e6;
+}

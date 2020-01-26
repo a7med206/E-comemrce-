@@ -1,0 +1,14 @@
+.card{
+  min-width: 278px;
+  }
+ @media (max-width:991px){
+.card{
+  margin-left: 5rem;
+}
+  }
+  @media (max-width: 576px) { 
+    .card{
+      margin-left: -2rem;
+    }
+  }
+  

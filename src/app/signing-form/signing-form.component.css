@@ -1,0 +1,78 @@
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0,0, 0.75);
+    z-index: 1001;
+}
+.alert-box{
+    position: fixed;
+    top: 23vh;
+    left: 37vw;
+    width: 35vw;
+    padding: 26px;
+    z-index: 1005;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0,0, 0.26);
+    padding-left: 50px;
+    border-radius: 7%;
+}
+.alert-box-actions{
+    text-align: right;
+}
+.sign{
+    background-color: #e6e6e6;
+    color: black;
+    margin-bottom: 10px;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 15%;
+    margin-right: 1rem;
+}
+.color{
+    background-color:red;
+}
+.sign:hover{
+    background-color: red;
+}
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+  }
+  
+  .ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+  }
+
+  .lds-circle {
+    display: inline-block;
+    transform: translateZ(1px);
+  }
+  .lds-circle > div {
+    display: inline-block;
+    width: 26px;
+    height: 24px;
+    margin: 8px;
+    border-radius: 50%;
+    background: #4296ff;
+    animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  @keyframes lds-circle {
+    0%, 100% {
+      animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    }
+    0% {
+      transform: rotateY(0deg);
+    }
+    50% {
+      transform: rotateY(1800deg);
+      animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+    }
+    100% {
+      transform: rotateY(3600deg);
+    } 
+  
+  }
+  

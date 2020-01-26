@@ -1,0 +1,246 @@
+body{
+    overflow-x: hidden ;
+}
+
+.Categories-btn{
+    height: 100%;
+    padding-right: 46px;
+    display: inline-flex;
+    flex-wrap: nowrap;
+    margin-left: 30px;
+}
+.Categories-btn::after{
+display: none;
+}
+.Categories-btn p {
+padding-left: 10px;
+padding-top: 5px;
+}
+.burger-btn{
+    width: 35px;
+    height: 5px;
+    background-color: black;
+    margin: 6px 0;
+}
+
+
+.bg-dark{
+    background-color: black!important;
+    padding: 0!important;
+}
+.thirdNav nav div ul li {
+    margin-left: 50px;
+}
+.mainNav{
+    margin-top: 20px;
+    font-size: 1rem;
+}
+.mainNav:hover a{
+color: #E10001;
+}
+.mainNav a{
+    color: white;
+    display: contents;
+
+}
+.categoriesMenu{
+    margin-left: 32px;
+    margin-top: -1px;
+    padding-left: 1rem;
+    padding-right: 1.2rem;
+}
+
+.categoriesMenu a:not(.more){
+    border-bottom: #dfdfdf 1px solid;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-left: 20px;
+
+}
+.more{
+    padding-bottom: 15px;
+    padding-top: 15px;
+    margin-left: 20px;
+}
+@media (max-width:991px){
+    .categoriesMenu{
+        background-color: #000000;
+        color: white;
+    }
+    .categoriesMenu a{
+color: white;
+    }
+}
+.subMenu{
+    visibility: hidden;
+    border: #dfdfdf 1px solid;
+    display: grid;
+    position: absolute;
+    margin-left: 160px;
+    margin-top: -40px;
+    padding-right: 20px;
+}
+.Lamps:hover .subMenu {
+    visibility: visible;
+}
+.subMenu2{
+    visibility: hidden;
+    border: #dfdfdf 1px solid;
+    display: grid;
+    position: absolute;
+    margin-left: 160px;
+    margin-top: -40px;
+    padding-right: 20px;
+}
+.MP3:hover .subMenu2   {
+    visibility: visible;
+}
+.MP3{
+margin-left: 33px;
+}
+.moreCategories{
+    margin-left: -18px;
+    padding-right: 6px;
+    margin-top: -3px;
+    overflow-x: hidden;
+}
+.ads{
+    position: relative;
+    top: 360px;
+    left: 30px;
+    min-width: 245px;
+}
+
+.sale{
+    position: relative;
+    top: 345px;
+    left: 30px;
+    min-width: 245px;
+
+}
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    opacity: 0.1;
+    overflow: hidden;
+    width: 100%;
+    height:0%;
+    transition: .5s ease;
+  }
+  
+  .sale:hover a .overlay {
+    bottom: 0;
+    height: 100%;
+  }
+  .sliding{
+    position: relative;
+    top: 330px;
+    left: 30px;
+    min-width: 240px;
+    max-width: 260px;
+  }
+  @media(max-width:1024px){
+.ads{
+    left: 65px;
+}
+.sale{
+    left: 65px;
+}
+.sliding{
+    left: 65px;
+
+}
+  }
+  @media (max-width: 991px){
+    .ads{
+        top: 10px;
+        left: 0px;
+        }
+    .moreCategories{
+background-color: #000000;
+color: white;
+    }
+    .sale{
+        position: relative;
+        top: 241px;
+        left: -214px;
+        min-width: 245px;
+    }
+    .sliding{
+        position: relative;
+        top: 36px;
+        left: 45px;
+        min-width: 245px;
+      }
+}
+@media (max-width: 991px){
+.sale{
+    left: 0px;
+    top: 1px;
+}
+.sliding{
+    position: relative;
+    top: -10px;
+    left: 0px;
+    min-width: 245px;
+}
+}
+@media(max-width:576px){
+    .ads{
+        left: -35px;
+    }
+    .sale{
+        left: -35px;
+
+    }
+.sliding{
+    left: -35px;
+
+}
+}
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  
+.carouselImg{
+    width: 100%;
+    height: 300px;
+  }
+  .productOutlet{
+    margin-left: 8rem;
+  }
+  #navbarNavDropdown .mainNav{
+    margin-right: 3rem;
+}
+@media(max-width:1024px){
+    #navbarNavDropdown .mainNav{
+    margin-right: auto;
+    }
+}
+@media(max-width:770px){
+    #navbarNavDropdown .mainNav{
+margin-left: auto;   
+max-inline-size: max-content;
+}
+}
+.mainNav{
+    width: max-content;
+
+  }
+  @media (min-width:991px) and (max-width:1410px) {
+    #navbarNavDropdown .navbar-nav {
+        flex-direction: column-reverse;
+
+    }
+  }

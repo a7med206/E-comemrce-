@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="products">
+        <div class="row">
+        <div class=" myProductsButtons" role="group" >
+        <a  routerLink='../newProduct' *ngIf="newProduct"
+        class="btn btn-success float-right  mt-4"> New Product</a>
+        <button type="button" class="btn btn-primary mt-4 " (click)="fetchMyProducts()">My products</button>
+        <button type="button" class="btn btn-danger mt-4 " (click)="onDeleteProducts()">Delete products</button>
+        </div>
+    </div>
+        <div class="row">
+        <div class="d-flex" *ngIf="isFetching">
+            <p class="mt-4 mr-4">Loading </p>
+            <div class="lds-facebook"><div></div><div></div><div></div></div> 
+        </div>
+       <p *ngIf='loadedProducts.length < 1' >No Products Available</p> 
+       <div class="row">
+       <ul class="card-deck" *ngIf="loadedProducts.length >= 1">
+           <li class=" card col-4 m-3" *ngFor="let product of loadedProducts">
+               <div class=" card-body" >
+                <img class="card-img" src="{{ product.productImage }}"  alt="product Image">           
+               <p #productNAme class="card-title" >  {{ product.ProductName }}</p>
+               <p class="card-text" > {{ product.productDescription }}</p>
+               <p #ids class="card-text">Product ID: {{ product.id }}    </p> 
+               <button type="button"  (click)="updateProduct()" class="btn btn-primary mt-4 ml-3" *ngIf=" !isUpdating "> Update  </button>
+               <button type="button" (click)="DeleteOneProduct(product.id)" class="btn btn-danger mt-4 ml-3"> Delete </button>
+            </div>
+
+           </li> 
+       </ul> 
+       </div>
+    </div>
+        <!-- update form___________________________________________________________ -->
+        <form #updateProduct='ngForm' *ngIf="isUpdating"
+         (ngSubmit)="OnUpdateProduct(updateProduct)"
+         id="updateForm">
+            <h1 >update Product   </h1>
+            <label for="product name">Product name </label> &nbsp;
+            <input type="text"
+            class="form-control"
+            ngModel name='productName' required   >
+            <label for="Product Description">Product Description</label>
+            <input type="text"
+             class="form-control"
+            ngModel  name="ProductInfo" required >
+           <label for="product image">Product image url</label>
+           <input type="text" class="form-control"
+           ngModel name="productImage" required  >
+           <label for="product image">Product  id </label>
+           <input type="text" class="form-control"
+           ngModel name="productID" required  >
+           <button type="submit"  class="btn btn-success mt-4" [disabled]='!updateProduct.valid'>update</button>
+           <button type="button" class="btn btn-danger mt-4 float-right mr-1" (click)="closeUpdateForm()" >close</button>
+           </form>
+    </div>
+</div>

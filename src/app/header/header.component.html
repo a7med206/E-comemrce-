@@ -1,0 +1,73 @@
+<div class="container" >
+    <div class="row">
+      <div class="col-md-6 col-sm-10">
+          <p class=" disabled pl-5 pt-3">Get 30% Off On Selected Items <i class="fas fa-phone-volume"></i>  +91 123456789
+          </p></div>
+          <div class="col-md-6 col-sm-10">
+      <form class="form-inline pt-2 float-right ">
+        <a class="nav-link dropdown-toggle header-form" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-dollar-sign"></i> Currency
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+        <a class="nav-link dropdown-toggle header-form border_left" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-flag-usa"></i>Language
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+          <a class="nav-link header-form border_left" href="#" >
+            Compare
+          </a>
+      </form>
+      </div>
+    </div>
+  </div>
+  <hr style="position: relative; bottom: 18px;">
+  <div style="overflow-x: hidden;">
+    <div class="row secondNav">
+  <div class="Brand  col-2" style="cursor: pointer;" 
+  routerLink='home' >
+    <span> <i class="fas fa-shopping-cart"></i></span>
+    Re-Mart
+    <p>All in one store</p>
+   </div>
+   <div class="col-5 form">
+     <form class="form-inline searchBar">
+      <select name="cars" class="col-3">
+        <option value="0">Categories</option>
+        <option value="saab">Saab</option>
+        <option value="fiat">Fiat</option>
+        <option value="audi">Audi</option>
+      </select>
+      <input type="search" name="search" placeholder="Search" class="col-7" >
+      <button type="submit" class="col-1"><i class="fas fa-search"></i></button>
+     </form>
+   </div> 
+   <div class="leftList   col">
+    <ul class="list-inline list-group list-group-horizontal">
+      <li>
+        <a  class="mx-3 secondNavLeft" (click)='Logging()' style="cursor: pointer;" > &nbsp; <i class="far fa-user"></i> <br>My account
+           
+        </a>
+      </li>
+      <li>
+        <a href="#" class="mx-3 secondNavLeft"><i class="far fa-heart"></i><br> Wish List</a>
+      </li>
+      <li>
+        <a href="#" class="mx-3 secondNavLeft">&nbsp; <i class="fas fa-dumpster"></i><br> &nbsp; My Cart </a>
+      </li>
+      <li>
+        <a style="cursor: pointer; " class="mx-3 secondNavLeft" *ngIf='isAuthenticated' (click)='onLogOut()'> log Out </a>
+      </li>
+    </ul>
+  </div>
+   </div>
+   </div>

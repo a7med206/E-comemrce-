@@ -1,0 +1,64 @@
+<div class="backdrop"> </div>
+    <div class="alert-box">
+        <div class="aler alert-danger" *ngIf="errorMsg"> <p class="help-block" > {{ errorMsg }} </p> </div>
+        <div class="row" *ngIf='!isLoading' >
+       <a class="sign " (click)=(signIN()) id="signIn" >Sign In</a>
+       <a class="sign" (click)=(signUp()) id="signUp" >Sign Up</a>
+     </div>
+     <div class="row" *ngIf='!isLoading'>
+            <form *ngIf='correct' (ngSubmit)="onSignIn(signingIn)" #signingIn='ngForm' >
+             <label for="email" >email</label>
+             <input type="email" id="email" 
+             class="form-control"
+             ngModel 
+             name="email"
+             required
+             email
+             #email='ngModel'>
+             <span class="help-block" *ngIf='!email.valid && email.touched'>email is invalid</span> <br>
+             <label for="password" >password</label>
+            <input type="password" id="password"
+            class="form-control"
+            ngModel
+            name="password"
+            required 
+            minlength="8" >
+            <button type="submit" class="btn btn-success m-3 " [disabled]='!signingIn.valid' >Sign In</button>
+            </form>
+            <form *ngIf='!correct' (ngSubmit)=(onSignUpSubmit(signup)) #signup='ngForm' >
+                <label for="userName" >User Name</label>
+                <input type="userName" id="userName" 
+                class="form-control"
+                ngModel 
+                name="userName"
+                required
+                minlength="8"
+                #userName='ngModel' >
+                <span class="help-block" *ngIf='!userName.valid && userName.touched'>user name  is invalid</span> <br>
+                <label for="email" >email</label>
+                <input type="email" id="email" 
+                class="form-control"
+                ngModel
+                name="email" 
+                required
+                email
+                #email='ngModel'>
+                <span class="help-block" *ngIf='!email.valid && email.touched'>email is invalid</span> <br>
+                <label for="password" >password</label>
+               <input type="password" id="password"
+               class="form-control"
+               ngModel
+               name="password"
+               required
+               minlength="8"
+               #password='ngModel' >
+               <span class="help-block" *ngIf='!password.valid && password.touched'>password is too short</span> 
+                           <br>
+               <button type="submit" class="btn btn-success m-3 " [disabled]='!signup.valid' >Sign Up</button>
+            </form>
+     </div>
+        <div class="alert-box-actions">
+            <div class="lds-circle mr-5"  *ngIf='isLoading'><div></div></div>   
+      <button class="btn btn-primary " routerLink='/' >Close</button>
+        </div>
+        </div>

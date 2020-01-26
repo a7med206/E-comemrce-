@@ -1,0 +1,21 @@
+<div class="backdrop">
+    <div class="alert-box">
+<form #newProduct='ngForm' (ngSubmit)="addNewProduct(newProduct)" *ngIf='!isLoading'>
+    <h1 >Add new Product to sell</h1>
+    <label for="product name">Product name</label> &nbsp;
+    <input type="text"
+    class="form-control"
+    ngModel name='productName' required  >
+    <label for="Product Description">Product Description</label>
+    <input type="text"
+     class="form-control"
+    ngModel  name="ProductInfo" required>
+   <label for="product image">Product image</label>
+   <input type="text" class="form-control"
+   ngModel name="productImage" required>
+ <button type="submit"  class="btn btn-success mt-4" [disabled]='!newProduct.valid'>add product</button>
+</form>
+<div class="lds-circle mr-5"  *ngIf='isLoading'><div></div></div>   
+<button class="btn btn-primary " routerLink='../myProducts' >Close</button>
+</div>
+</div>
