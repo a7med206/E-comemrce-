@@ -1,4 +1,4 @@
-<div class="backdrop"> </div>
+<div class="backdrop"> 
     <div class="alert-box">
         <div class="aler alert-danger" *ngIf="errorMsg"> <p class="help-block" > {{ errorMsg }} </p> </div>
         <div class="row" *ngIf='!isLoading' >
@@ -29,6 +29,7 @@
                 <label for="userName" >User Name</label>
                 <input type="userName" id="userName" 
                 class="form-control"
+                placeholder="user name"
                 ngModel 
                 name="userName"
                 required
@@ -62,3 +63,4 @@
       <button class="btn btn-primary " routerLink='/' >Close</button>
         </div>
         </div>
+      </div>

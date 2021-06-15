@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from './Auth.service';
 import { Router } from '@angular/router';
-import { ProductsService } from '../myProducts/Products.service';
 
 
 @Component({
@@ -17,13 +16,13 @@ correct=false;
 errorMsg='' ;
 isLoading= false;
 id: string;
+
  
 constructor(private authService: AuthService,
   private router:Router,
-  private productService: ProductsService) { }
+  ) { }
 
   ngOnInit() {
-   
   }
 
   signIN() {

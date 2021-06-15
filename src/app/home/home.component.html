@@ -1,19 +1,23 @@
-<div class="row">
+<div class="row ">
     <div class="products">
         <div class="d-flex" >
-            <p class="mt-4 mr-4">Loading </p>
             <div class="lds-facebook"><div></div><div></div><div></div></div> 
         </div>
        <p *ngIf='loadedProducts.length < 1' >No Products Available</p> 
        <div class="row">
-       <ul class="card-deck mt-3" *ngIf="loadedProducts.length >= 1">
-           <li class=" card col-4 mt-3" *ngFor="let product of loadedProducts">
+       <ul class="card-deck row mt-3" *ngIf="loadedProducts.length >= 1">
+           <li class="productItem col-lg-4 col-md-5 col-sm-8  mt-3" *ngFor="let product of loadedProducts">
+               <div class="card">
                <div class=" card-body" >
                 <img class="card-img" src="{{ product.productImage }}"  alt="product Image">             
                <p #productNAme class="card-title" >  {{ product.ProductName }}</p>
                <p class="card-text" > {{ product.productDescription }}</p>
                <p #ids class="card-text">Product ID: {{ product.id }}    </p> 
             </div>
+            <div class="down">
+                <button type="submit" class="btn btn-dark buy">Buy</button>
+            </div>
+        </div>
            </li> 
        </ul> 
        </div>

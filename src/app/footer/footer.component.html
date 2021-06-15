@@ -1,7 +1,8 @@
-<footer >
-    <div class="row">
+<footer>
+  <div class="row footer_cards">
     <div class="card mb-3 col-3 ">
-      <div class="row no-gutters">
+      <button class=" btn" type="button" (click)="onContactUS()">CONTACT US <i class="fas fa-sort-down"></i> </button>
+      <div class="row no-gutters" *ngIf="contactUs">
         <div class="col-md-4">
           <img src="../assets/images/headset-for-call-service.png" class="card-img" alt="...">
         </div>
@@ -9,74 +10,80 @@
           <div class="card-body">
             <h5 class="card-title"> CONTACT US</h5>
             <p class="card-text">+91 123456789</p>
-            <p class="card-text"><small class="text-muted"> <i class="fas fa-map-marker-alt" style="color: red;"></i> remart multistore United States</small></p>
+            <p class="card-text"><small class="text-muted"> <i class="fas fa-map-marker-alt" style="color: red;"></i> remart multistore United
+                States</small></p>
           </div>
         </div>
       </div>
     </div>
     <div class="card mb-3 col-3 ">
-      <div class="row no-gutters">
+      <button class=" btn" type="button" (click)="onNewsLetter()">NEWSLETTER <i class="fas fa-sort-down"></i></button>
+      <div class="row no-gutters" *ngIf="newsLetter">
         <div class="col-md-4">
           <img src="../assets/images/message.png" class="card-img" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">NEWSLETTER          </h5>
+            <h5 class="card-title">NEWSLETTER </h5>
             <p class="card-text">Get <Span>40% Off </Span>On Selected Items!</p>
             <form class="form-inline searchBar">
-              <input type="email" name="email" placeholder="type your email" class="col-10" >
+              <input type="email" name="email" placeholder="type your email" class="col-10">
               <button type="submit" class="col-3"><i class="fas fa-location-arrow"></i></button>
-             </form>    
-                </div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
-    <div class="card mb-3 col-3 " >
-      <div class="row no-gutters">
+    <div class="card mb-3 col-3 ">
+      <button class=" btn" type="button" (click)="onSpecialGift()">Special Gift <i class="fas fa-sort-down"></i></button>
+      <div class="row no-gutters " *ngIf="specialGift">
         <div class="col-md-4">
           <img src="../assets/images/gift.png" class="card-img" alt="...">
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">Special Gift</h5>
-            <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</small></p>
+            <p class="card-text"><small class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                ut</small></p>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  <div class="row  my-5 px-5 justify-content-center">
+    <div class="col-sm-1 footerCol ">
+      <b (click)="onInformation()"> Information <i class="fas fa-sort-down"></i></b>
+      <a class="footerLink" href="#" *ngIf="Information">About Us </a>
+      <a class="footerLink" href="#" *ngIf="Information">Delivery Information </a>
+      <a class="footerLink" href="#" *ngIf="Information">Privacy Policy </a>
+      <a class="footerLink" href="#" *ngIf="Information">Terms & conditions </a>
     </div>
-    <div class="row ml-5 mb-5">
-      <div class="col-sm-1 footerCol ml-5" ><b> Information </b>
-      <a class="footerLink" href="#">About Us  </a>
-      <a class="footerLink" href="#">Delivery Information  </a>
-      <a class="footerLink" href="#">Privacy Policy  </a>
-      <a class="footerLink" href="#">Terms & conditions  </a>
-  
-      </div>
-      <div class="col-sm-1 footerCol" ><b> Our Company </b>
-        <a class="footerLink" href="#"> My Account  </a>
-        <a class="footerLink" href="#"> Order History  </a>
-        <a class="footerLink" href="#"> Wish List  </a>
-        <a class="footerLink" href="#">NewsLetter  </a>
-        </div>
-      <div class="col-sm-1 footerCol" ><b> Category </b>
-        <a class="footerLink" href="#">Contact Us </a>
-        <a class="footerLink" href="#">Returns  </a>
-        <a class="footerLink" href="#">Site Map </a>
-        <a class="footerLink" href="#">Gift certificate  </a>
-        </div>
-       <div class="col-3 "><b>DOWNLOAD APP</b><br>
-        <img src="../assets/images/app1.png" class="mr-3 mt-3">
-        <img src="../assets/images/app2.png" class="mt-3">
-         <br><b class="mt-5 pt-5"> Social</b>
-        <div class="social">
+    <div class="col-sm-1 footerCol">
+      <b (click)="onOurCompany()"> Our Company <i class="fas fa-sort-down"></i></b>
+      <a class="footerLink" href="#" *ngIf="ourCompany"> My Account </a>
+      <a class="footerLink" href="#" *ngIf="ourCompany"> Order History </a>
+      <a class="footerLink" href="#" *ngIf="ourCompany"> Wish List </a>
+      <a class="footerLink" href="#" *ngIf="ourCompany">NewsLetter </a>
+    </div>
+    <div class="col-sm-1 footerCol">
+      <b (click)="onCategory()"> Category <i class="fas fa-sort-down"></i></b>
+      <a class="footerLink" href="#" *ngIf="Category">Contact Us </a>
+      <a class="footerLink" href="#" *ngIf="Category">Returns </a>
+      <a class="footerLink" href="#" *ngIf="Category">Site Map </a>
+      <a class="footerLink" href="#" *ngIf="Category">Gift certificate </a>
+    </div>
+    <div class="col-3 footerSocial"><b>DOWNLOAD APP</b><br>
+      <img src="../assets/images/app1.png" class="mr-3 mt-3">
+      <img src="../assets/images/app2.png" class="mt-3">
+      <br><b class="mt-5 pt-5"> Social</b>
+      <div class="social">
         <a href="#" class="socialLink"> <i class="fab fa-facebook-f"></i> </a>
         <a href="#" class="socialLink"> <i class="fab fa-twitter"></i> </a>
         <a href="#" class="socialLink"> <i class="fab fa-instagram"></i></a>
         <a href="#" class="socialLink"> <i class="fab fa-youtube"></i></a>
         <a href="#" class="socialLink"> <i class="fas fa-rss"></i></a>
-  </div>
       </div>
     </div>
-    
-  </footer>
+  </div>
+
+</footer>

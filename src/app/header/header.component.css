@@ -1,123 +1,196 @@
+.width_100 {
+  width: 100vw;
+}
 .header-form {
-    color: black;
-    font-size: 0.8rem;
-        font-weight: 600;
-    }
-    .header-form:hover{
-        color: #E10001;
-    
-    }
-    .fa-phone-volume{
-        color: #E10001;
-    }
-    .disabled{
-        font-size: 0.8rem;
-        color: black;
-    
-    }
-    .disabled:hover {
-        font-size: 0.8rem;
-        color: black;
-    
-    }
-    .border_left{
-        border-left: 1px solid #a0a0a0;
-    }
-    .firstNav{
-        height: 40px;
-    }
-    .secondNavLeft{
-        color: black;
-    }
-    .secondNavLeft:hover{
-        color: #E10001;
-        text-decoration: none;
-    }
-    .secondNavLeft i{
-        font-size: 1.7rem;
-        text-align:middle;
-    
-    }
-    .form{
-        min-width: 494px;
-    }
-    .Brand{
-        font-size: 2rem;
-        font-weight: 800;
-        margin-left: 7rem;
-        min-width: 212px;
-    
-    }
-    .Brand span{
-        background-color: #df5f38;
-        font-size: 1.5rem;
-        font-weight: 400;
-        border-radius: 50%;
-        color: white;
-        margin-right: 7px;
-        padding: 4px;
-    }
-    .Brand p {
-        font-size: 0.9rem;
-        padding-left: 50px;
-        margin-top: -10px;
-        color: #a0a0a0;
-    
-    }
-    .searchBar {
-        display:  flex;
-        flex-wrap: nowrap;
-    }
-    .searchBar select{
-        background-color: #e4e3e3 ;
-        border: 0px;
-        padding: 10px;
-        border-radius:10px 0px 0px 10px;
-        color: #6b6969;
-    }
-    .searchBar button{
-        background-color: #E10001;
-        border: 0px;
-        border-radius:0px 10px 10px 0px;
-        padding: 10px;
-        color: white;
-        font-size: 1rem;
-        font-weight: 100;
-        min-width: 85px;
-    }
-    .searchBar button:hover {
-        background-color: #000000;
-    }
-    .searchBar input{
-        padding: 9px;
-        border: 1px solid #e6e6e6;
-    }
-    .leftList{
-        margin-right: 5rem;
-        min-width: 260px;
-        margin-left: auto;
-    
-    }
-    @media(max-width:1124px){
- 
-       .leftList{
-            margin-left: 29rem;
-        }
-    }
+  color: black;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
 
-    @media(max-width:776px){
-        .secondNav{
-justify-content: center;
-        }
-        .leftList{
-            margin-left: 18rem;
-        }
-        .Brand{
-            margin-left: 6rem;
-        }
-    }
-    .mainNav{
-        width: max-content;
-    
-      }
- 
+.header-form:hover {
+  color: #E10001;
+
+}
+
+.fa-phone-volume {
+  color: #E10001;
+}
+
+.disabled {
+  font-size: 0.8rem;
+  color: black;
+
+}
+
+.disabled:hover {
+  font-size: 0.8rem;
+  color: black;
+
+}
+
+.border_left {
+  border-left: 1px solid #a0a0a0;
+}
+
+.firstNav {
+  height: 40px;
+}
+
+.secondNavLeft {
+  color: black;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  height: 55px;
+  line-height: 10px;
+}
+
+.secondNavLeft:hover {
+  color: #E10001;
+  text-decoration: none;
+}
+
+.secondNavLeft i {
+  font-size: 1.7rem;
+  text-align: middle;
+
+}
+
+.form {
+  min-width: 494px;
+}
+
+.Brand {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-left: 7rem;
+  min-width: 212px;
+
+}
+
+.Brand span {
+  background-color: #df5f38;
+  font-size: 1.5rem;
+  font-weight: 400;
+  border-radius: 50%;
+  color: white;
+  margin-right: 7px;
+  padding: 4px;
+}
+
+.Brand p {
+  font-size: 0.9rem;
+  padding-left: 50px;
+  margin-top: -10px;
+  color: #a0a0a0;
+
+}
+
+.searchBar {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.searchBar select {
+  background-color: #e4e3e3;
+  border: 0px;
+  padding: 10px;
+  border-radius: 10px 0px 0px 10px;
+  color: #6b6969;
+}
+
+.searchBar button {
+  background-color: #E10001;
+  border: 0px;
+  border-radius: 0px 10px 10px 0px;
+  padding: 10px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 100;
+  min-width: 85px;
+}
+
+.searchBar button:hover {
+  background-color: #000000;
+}
+
+.searchBar input {
+  padding: 9px;
+  border: 1px solid #e6e6e6;
+}
+
+.leftList {
+  margin-right: 5rem;
+  min-width: 260px;
+  margin-left: auto;
+
+}
+
+.list-group-horizontal {
+  justify-content: center;
+}
+
+@media(max-width:1124px) {
+
+  .leftList {
+    margin-left: 29rem;
+  }
+}
+
+@media(max-width:776px) {
+  .secondNav {
+    justify-content: center;
+  }
+
+  .leftList {
+    margin-left: 18rem;
+  }
+
+  .Brand {
+    margin-left: 6rem;
+  }
+}
+
+.mainNav {
+  width: max-content;
+
+}
+
+@media(max-width:576px) {
+  input {
+    max-width: 20%;
+  }
+
+  .form {
+    margin-left: 11rem;
+  }
+
+  .Brand {
+    margin-left: 0rem;
+  }
+
+  .leftList {
+    margin-left: 8rem;
+    min-width: 84%;
+    margin-top: 1rem;
+
+  }
+
+  .list-group-horizontal {
+    flex-wrap: wrap;
+
+  }
+
+  .secondNavLeft {
+    margin-top: 1rem;
+  }
+
+  .list-group-horizontal li:nth-child(4) {
+    margin-top: -1rem;
+
+  }
+}

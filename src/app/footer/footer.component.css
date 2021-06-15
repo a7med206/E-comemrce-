@@ -1,15 +1,19 @@
 
   footer{
     background-color: #F5F5F5;
-    position: relative;
-    bottom: -1272px;
     width: 100%;
     overflow-x: hidden;
+    margin-top: 2rem;
+  }
+  .footer_cards {
+    justify-content: space-around;
+    padding: 0 5rem;
   }
   footer .card{
-    margin-left: 7rem;
-    margin-right: -1rem;
+    margin-right: 1rem;
     margin-top: 3rem;
+    min-width: 18rem;
+
   }
   .no-gutters div img{
     width: 82%;
@@ -35,9 +39,10 @@
   }
   .footerCol{
     flex: 0 0 25%;
-    max-width: 20%;
+    max-width: 21%;
     display: grid;
     grid-gap: 14px;
+    margin-left: 3rem;
   }
   .footerCol b {
     font-weight: 500;
@@ -50,6 +55,17 @@
       color: #E10001;
       text-decoration: none;
   }
+  b i{
+visibility: hidden;
+ }
+ footer .row:nth-child(2){
+  margin-left: 3rem;
+
+}
+footer .row:nth-child(2) .footerCol{
+margin-left: 3rem;
+}
+
   .social{
     display: flex;
     flex-flow: row;
@@ -70,7 +86,7 @@
       color: white;
       background-color: #E10001;;
   }
-  
+
   .searchBar {
     display:  flex;
     flex-wrap: nowrap;
@@ -92,4 +108,83 @@
 .searchBar input{
     padding: 9px;
     border: 1px solid #e6e6e6;
+}
+.navbar-toggler{
+border: 0px;
+}
+@media(min-width:1023px){
+  .footerSocial{
+  margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+  }
+}
+@media (min-width:991px){
+.btn{
+  display: none;
+}
+
+}
+@media(max-width:991px){
+  .row{
+    justify-content: center;
+  }
+  footer .card{
+    margin-left: 8rem;
+      margin-right: 8rem;
+      min-width: 18rem;
+
+  }
+  .btn i{
+    position: relative;
+    bottom: 3px;
+    left: 2px;
+  }
+  .footerCol b {
+    cursor: pointer;
+  }
+ .footerCol b i{
+visibility: visible;
+  }
+  footer .row:nth-child(2){
+    margin-left: auto;
+    margin-right: auto;
+  }
+  footer .row:nth-child(2) .footerCol{
+  margin-left: auto;
+  margin-right: auto;
+  }
+  .footerCol b{
+    margin-right: auto;
+    margin-left: auto;
+  }
+.footerSocial{
+  margin-top: 2rem;
+  margin-right: 93px;}
+
+}
+@media (max-width:576px){
+  footer .card{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    min-width: 18rem;
+}
+.no-gutters div img{
+  width: 60%;
+}
+.footerCol{
+  min-width: 60%;
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+.footerSocial{
+  margin-left: 2rem;
+  margin-top: 2rem;
+
+}
+.social{
+  margin-left: -2rem;
+
+}
 }

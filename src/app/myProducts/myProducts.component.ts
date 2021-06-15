@@ -1,9 +1,9 @@
-import { Component, OnInit, ViewChild, ViewChildren, ElementRef, QueryList,  } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewChildren, ElementRef, QueryList, OnDestroy,  } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ProductsService } from './Products.service';
 import { product } from './product.model';
 import { AuthService } from '../signing-form/Auth.service';
-import { map } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
 
 
 
@@ -12,7 +12,7 @@ import { map } from 'rxjs/operators';
   templateUrl: './myProducts.component.html',
   styleUrls: ['./myProducts.component.css']
 })
-export class MyProductsComponent implements OnInit {
+export class MyProductsComponent implements OnInit, OnDestroy {
 @ViewChild('updateProduct', {static:false}) updatingProduct :NgForm;
 @ViewChildren('ids' )  newProductID:QueryList< ElementRef >;
 isFetching = false;
@@ -22,6 +22,8 @@ userId:string;
 idSArray:[];
 productID:string;
 isUpdating=false;
+private userSub: Subscription;
+
  constructor( private productService: ProductsService,
   private authService: AuthService) { };
 
@@ -29,20 +31,19 @@ isUpdating=false;
 
   ngOnInit() {
   
-   
-  
- 
+    this.authService.autoLogin();
+    this.userSub =  this.authService.user.subscribe(
+   user =>{
+    console.log(user.id);
+      this.userId=user.id;
+      this.productService.userId(this.userId);
+      console.log(this.productService.id);
+  });
+  this.fetch();
 
   }
-
- 
-
-
-
- 
   
-
-  fetchMyProducts(){
+fetchMyProducts(){
   this.productService.fetchProducts().
   subscribe(products =>{
     this.isFetching=true;
@@ -60,7 +61,8 @@ isUpdating=false;
       this.loadedProducts= products;
       this.isFetching=false;
 
-  });}
+  });
+}
 
   onDeleteProducts(){
     this.isFetching=true;
@@ -102,14 +104,9 @@ this.fetch();
   closeUpdateForm(){
     this.isUpdating=false;
   }
-  ngAfterViewInit(){
-    this.authService.user.pipe(map(userData=>{
-      console.log(userData.id);
-      this.userId=userData.id;
-      this.productService.userId(this.userId);
-      } ));
-      console.log(this.productService.id);
-this.fetch();
+ 
+  ngOnDestroy(){
+    this.userSub.unsubscribe();
   }
 }
  

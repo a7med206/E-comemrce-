@@ -76,3 +76,28 @@
     } 
   
   }
+  .btn-primary{
+    float: right;
+    margin-top: -2.3rem;
+  }
+  @media(max-width:1124px){
+    .alert-box{
+      top: 7vh;
+    left: 28vw;
+    width: 51vw;
+    }
+  }
+  @media(max-width:991px){
+    .alert-box{
+      top: 10vh;
+    left: 17vw;
+    width: 70vw;
+    }
+  }
+  @media(max-width:575px){
+    .alert-box{
+      top: 3vh;
+    left: 9vw;
+    width: 86vw;
+    }
+  }

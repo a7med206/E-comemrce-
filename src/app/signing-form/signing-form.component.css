@@ -9,9 +9,9 @@
 }
 .alert-box{
     position: fixed;
-    top: 23vh;
+    top: 15vh;
     left: 37vw;
-    width: 35vw;
+    width: 35%;
     padding: 26px;
     z-index: 1005;
     background-color: #fff;
@@ -75,4 +75,29 @@
     } 
   
   }
-  
+
+.btn-primary{
+  position: relative;
+  bottom: 3.3rem;
+}
+@media (max-width : 1299px){
+  .alert-box{
+    width: 35%;
+    top: 7vh;
+  }
+}
+@media (max-width : 991px){
+  .alert-box{
+    width: 41%;
+    top: 5vh;
+    left: 41vh;
+  }
+}
+@media(max-width:575px){
+  .alert-box{
+    width: 84%;
+    top: 5vh;
+    left: 5vh;
+
+  }
+}

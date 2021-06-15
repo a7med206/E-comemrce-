@@ -14,16 +14,16 @@
             <div class="lds-facebook"><div></div><div></div><div></div></div> 
         </div>
        <p *ngIf='loadedProducts.length < 1' >No Products Available</p> 
-       <div class="row">
+       <div class="row" id="cardsRow">
        <ul class="card-deck" *ngIf="loadedProducts.length >= 1">
-           <li class=" card col-4 m-3" *ngFor="let product of loadedProducts">
+           <li class=" card col-4 " *ngFor="let product of loadedProducts">
                <div class=" card-body" >
                 <img class="card-img" src="{{ product.productImage }}"  alt="product Image">           
                <p #productNAme class="card-title" >  {{ product.ProductName }}</p>
                <p class="card-text" > {{ product.productDescription }}</p>
                <p #ids class="card-text">Product ID: {{ product.id }}    </p> 
-               <button type="button"  (click)="updateProduct()" class="btn btn-primary mt-4 ml-3" *ngIf=" !isUpdating "> Update  </button>
-               <button type="button" (click)="DeleteOneProduct(product.id)" class="btn btn-danger mt-4 ml-3"> Delete </button>
+               <button type="button"  (click)="updateProduct()" class="btn btn-primary mt-4" *ngIf=" !isUpdating "> Update  </button>
+               <button type="button" (click)="DeleteOneProduct(product.id)" class="btn btn-danger mt-4"> Delete </button>
             </div>
 
            </li> 

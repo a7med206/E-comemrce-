@@ -37,22 +37,32 @@
   .myProductsButtons{
 margin-left: auto;
   }
+  .card-body button{
+  margin-right: 1rem;
+  }
+  .card-deck{
+    justify-content: center;
+  }
   .card{
     min-width: 278px;
+    margin-top: 1rem;
     }
    @media (max-width:991px){
   .card{
-    margin-left: 5rem;
+    min-width: 200px;
+margin-top: 1rem;
+margin-bottom: 1rem;
+margin-left: auto;
+margin-right: auto;
   }
+  .card-body button{
+    margin-right: 0rem;
+    }
     }
     @media (max-width: 576px) { 
       .card{
-        margin-left: -2rem;
+        margin-left: auto;
       }
-    }
-    .card-deck{
-      margin-top: 4rem;
-
     }
     .myProductsButtons{
       float: right;
@@ -62,10 +72,42 @@ margin-left: auto;
     display: flex;
     vertical-align: middle;
     flex-wrap: wrap;
+    justify-content: center;
+
+    }
+    .myProductsButtons button{
+      margin-left: 6px;
+    }
+    @media(max-width:1124px){
+      .myProductsButtons{
+        margin-left: 12rem;
+      }
     }
     @media (max-width:991px){
       .myProductsButtons{
         margin-left: 0rem;
+      }
+      .card{
+        min-width: 200px;
+      }
+      .card-body button{
+        margin-left: 6px;
+        font-size: 10px;
+      }
+      .products{
+        margin-left: 4rem;
+      }
+    }
+    @media(max-width:576px){
+   
+   
+      .products{
+        margin-left: 0rem;
+        justify-content: center;
+      }
+      .card-deck{
+        padding-inline-start: 0px;
+
       }
     }
   

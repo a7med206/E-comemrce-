@@ -1,116 +1,121 @@
-<app-header></app-header>
-<div class="thirdNav">
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse " id="navbarNavDropdown">
-    <ul class="navbar-nav ">
-      
-      <li class="nav-item  dropdown">
+<div class="row">
+  <app-header></app-header>
+  <div class="thirdNav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNavDropdown" [ngClass]="{'show': isClicked}" #navbarNav>
+        <ul class="navbar-nav ">
 
-        <button class="btn btn-danger btn-lg dropdown-toggle Categories-btn" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-         <div> <div class="burger-btn"></div>
-          <div class="burger-btn"></div>
-          <div class="burger-btn"></div></div>
-          <p>All Categories </p>
-        </button>
-        <div class="dropdown-menu  show categoriesMenu " aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item " href="#">Desktops</a>
-          <a class="dropdown-item Lamps dropdown-toggle"  href="#"> Lamps
-            <div class=" subMenu ">
-              <a href="#"> hola</a>
+          <li class="nav-item  dropdown">
+
+            <button class="btn btn-danger btn-lg dropdown-toggle Categories-btn" href="#" id="navbarDropdownMenuLink" role="button"
+                    data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+              <div>
+                <div class="burger-btn"></div>
+                <div class="burger-btn"></div>
+                <div class="burger-btn"></div>
+              </div>
+              <p>All Categories </p>
+            </button>
+            <div class="dropdown-menu   categoriesMenu " aria-labelledby="navbarDropdownMenuLink" [ngClass]="{'show': isOpen}">
+              <a class="dropdown-item " href="#">Desktops</a>
+              <a class="dropdown-item Lamps dropdown-toggle" href="#"> Lamps
+                <div class=" subMenu ">
+                  <a href="#"> hola</a>
+                </div>
+              </a>
+              <a class="dropdown-item dropdown-toggle MP3" href="#"> MP3 Player
+                <div class=" subMenu2">
+                  <a href="#">test0</a>
+                  <a href="#">test1</a>
+                  <a href="#">test2</a>
+                </div>
+              </a>
+              <a class="dropdown-item testSubMenu" href="#"> Software
+              </a>
+              <a class="dropdown-item" href="#"> Phones</a>
+              <div class="dropdown">
+                <a class="btn  dropdown-toggle more" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                  More Categories
+                </a>
+                <div class="dropdown-menu moreCategories" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
             </div>
-          </a>
-          <a class="dropdown-item dropdown-toggle MP3" href="#"> MP3 Player
-            <div class=" subMenu2"  >
-              <a href="#">test0</a>
-              <a href="#">test1</a>
-              <a href="#">test2</a>
-            </div>
-          </a>
-          <a class="dropdown-item testSubMenu" href="#"> Software
-          </a>
-          <a class="dropdown-item" href="#"> Phones</a>
-          <div class="dropdown">
-            <a class="btn  dropdown-toggle more" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              More Categories
-            </a>
-            <div class="dropdown-menu moreCategories" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </div>        </div>
-      </li>
-      <li class="nav-item  mainNav">
-        <a class="nav-link " routerLink='./home' >HOME</a>
-      </li>
-      <li class="nav-item  mainNav">
-        <a class="nav-link " routerLink='./Specials' >SPECIALS</a>
-      </li>
-      <li class="nav-item mainNav">
-        <a class="nav-link" routerLink='Contact' >CONTACT</a>
-      </li>
-      <li class="nav-item mainNav">
-        <a class="nav-link" routerLink='sitemap' >SITEMAP</a>
-      </li>
-      <li class="nav-item mainNav">
-        <a class="nav-link" routerLink='myProducts' *ngIf='isAuthenticated' (click)="reload()" >My Products</a>
-      </li>
-      <li class="nav-item mainNav">
-        <a class="nav-link" routerLink='Returns' *ngIf='isAuthenticated' >RETURNS</a>
-      </li>
-    </ul>
-    <li class="nav-item navbar-nav ml-auto mainNav mb-4 ">
-      <a class="nav-link" routerLink='specialOffers' >SPECIAL OFFER</a>
-    </li>
-  </div>
-</nav>
-</div>
-<div>
-  <div class="row justify-content-center" style="max-width: 95%;">
-    <div class="col-2">
-       <div class="row">
-    <div class="col-2 ads"> 
-      <a href="#" >
-      <img alt="ad" src="../assets/images/bnr-itg-40.png" class="w-100" >
-    </a>
-    </div>
-    </div>
-    <br>
-    <div class="row">
-    <div class="col-2 sale "> 
-      <a href="#" >
-      <img alt="ad" src="../assets/images/70_1500-lines.jpg" class="w-100" >
-      <div class="overlay">
-        <div class="text">.</div>
-   </div>
-      </a>
+          </li>
+          <li class="nav-item  mainNav">
+            <a class="nav-link " routerLink='./home' (click)="navCollapseTwo()">HOME</a>
+          </li>
+          <li class="nav-item  mainNav">
+            <a class="nav-link " routerLink='./Specials' (click)="navCollapseTwo()">SPECIALS</a>
+          </li>
+          <li class="nav-item mainNav">
+            <a class="nav-link" routerLink='Contact' (click)="navCollapseTwo()">CONTACT</a>
+          </li>
+          <li class="nav-item mainNav">
+            <a class="nav-link" routerLink='sitemap' (click)="navCollapseTwo()">SITEMAP</a>
+          </li>
+          <li class="nav-item mainNav">
+            <a class="nav-link" routerLink='myProducts' href="#" *ngIf='isAuthenticated' (click)="navCollapseTwo()">My Products</a>
+          </li>
+          <li class="nav-item mainNav">
+            <a class="nav-link" routerLink='Returns' *ngIf='isAuthenticated' (click)="navCollapseTwo()">RETURNS</a>
+          </li>
+        </ul>
+        <li class="nav-item navbar-nav ml-auto mainNav mb-4 ">
+          <a class="nav-link" routerLink='specialOffers' (click)="navCollapseTwo()">SPECIAL OFFER</a>
+        </li>
       </div>
-    </div>
-    <br>
-    <div class="row">
-    <div class="col-2 sliding">
-      <a href="#" > 
-      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-         
-          <div class="carousel-item active">
-            <img src="../assets/images/bnr-itg-40.png" class="d-block carouselImg w-100" >
+    </nav>
+  </div>
+  <div>
+    <div class="row justify-content-center mx-0 main_row">
+      <div class="col-lg-2 col-md-2 col-sm-2 colAds">
+        <div class="row justify-content-center">
+          <div class="col-2 ads">
+            <a href="#">
+              <img alt="ad" src="../assets/images/bnr-itg-40.png" class="w-100">
+            </a>
           </div>
-          <div class="carousel-item">
-            <img src="../assets/images/bnr-itg-40.png" class="d-block carouselImg w-100" >
+          <br>
+          <div class="col-2 sale ">
+            <a href="#">
+              <img alt="ad" src="../assets/images/70_1500-lines.jpg" class="w-100">
+              <div class="overlay">
+                <div class="text">.</div>
+              </div>
+            </a>
+          </div>
+          <br>
+          <div class="col-2 sliding">
+            <a href="#">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+
+                  <div class="carousel-item active">
+                    <img src="../assets/images/bnr-itg-40.png" class="d-block carouselImg w-100">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="../assets/images/bnr-itg-40.png" class="d-block carouselImg w-100">
+                  </div>
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
-    </a>
-    </div>
+      <div class="col-9 productOutlet">
+        <router-outlet></router-outlet>
+      </div>
+
     </div>
   </div>
-  <div class="col-8 productOutlet">
-  <router-outlet ></router-outlet>
+  <app-footer></app-footer>
 </div>
- </div>
- 
-<app-footer></app-footer>

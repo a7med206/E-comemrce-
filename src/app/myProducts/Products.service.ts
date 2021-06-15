@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {product } from './product.model';
-import { AuthService } from '../signing-form/Auth.service';
-import { User } from '../signing-form/user.model';
 import { map } from 'rxjs/operators'
 
 @Injectable({providedIn:"root"})
@@ -16,20 +14,20 @@ id:string;
 
 
 userId(id){
-  setTimeout(() => {
-    window.location.reload()
+  
 this.id=id;
-  }, 2000);  
-}
+  };  
+
 
 path:string;
 
  storeProducts (name:string, info:string, image:string ){
-     const productData: product = {ProductName: name,
-    productDescription: info,
-productImage: image
- };
- console.log(productData);
+     const productData: product = {
+         ProductName: name,
+         productDescription: info,
+         productImage: image
+                                 };
+    console.log(productData);
     console.log(this.id);
     this.path= 'https://e-commerce-1350c.firebaseio.com/myProducts/'+ this.id + '.json' ;
     return this.http.post(this.path,
